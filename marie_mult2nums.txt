@@ -1,0 +1,22 @@
+ORG 100
+    INPUT        /input from KBD to AC
+    Store X        /store in X
+    INPUT        /2nd input
+    Store Y        /store in Y
+loop ,    Load num    /get num
+    Add X        /AC=num+X
+    Store num    /num=AC
+    Load Y
+    Subt one 
+    Store Y        /Y=Y-1
+    Skipcond 400    /Is Y=0?
+    Jump loop    /NO, JMP loop
+
+    Load num    /YES, output num
+    Output
+    Halt
+
+X,       DEC 0        /let X=6
+Y,       DEC 0        /let Y=5
+one,     DEC 1
+num,     DEC 0

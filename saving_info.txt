@@ -1,0 +1,18 @@
+char buffer2[10];
+    /*loop variable*/
+    int i = 0;
+
+    /*ensuring two values per line*/
+    while(fgets(buffer2, sizeof(code_size), f) != NULL)
+    {
+        /*checking new line and empty space*/
+        if(buffer2 == "\n" || buffer2 == " ")
+        {
+            continue;
+        }
+
+        program_memory[i].op_code = atoi(&buffer2[0]);
+        program_memory[i].address = atoi(&buffer2[2]);
+        i++;
+        
+    }
