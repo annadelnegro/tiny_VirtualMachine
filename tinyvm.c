@@ -1,8 +1,3 @@
-/*
-        Anna Del Negro
-        Christie Beaubrun
-*/
-
 #include <stdio.h>
 #include <stdlib.h>
 
